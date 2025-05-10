@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trinity Health</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .top-bar, footer { background: maroon; color: white; display: flex; justify-content: space-between; padding: 10px 20px; align-items: center; position: fixed; width: 100%; z-index: 999; }
+    .top-bar { top: 0; }
+    footer { bottom: 0; justify-content: space-around; font-size: 0.9rem; }
+    main { padding-top: 80px; padding-bottom: 60px; }
+
+    .top-bar .branding { display: flex; align-items: center; }
+    .top-bar .branding img { width: 50px; height: auto; margin-right: 10px; }
+    .top-bar .social-icons a { margin-left: 10px; color: white; text-decoration: none; }
+
+    nav { background: rgb(80, 77, 77); color: white; position: fixed; top: 50px; width: 100%; z-index: 998; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; }
+    nav ul li { margin: 10px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; cursor: pointer; }
+
+    #nav-toggle { display: none; background: maroon; color: white; border: none; font-size: 1.5rem; padding: 10px; }
+
+    .page-section { display: none; padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .page-section.active { display: block; }
+    .page-section h2 { color: maroon; }
+    img.responsive { width: 100%; height: auto; }
+
+    @media (max-width: 768px) {
+      #nav-toggle { display: block; }
+      #nav-menu { display: none; flex-direction: column; align-items: center; }
+      #nav-menu.show { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="branding">
+      <img src="img/logo.png.png" alt="Trinity Health Logo" />
+      <h1>Trinity Health</h1>
+    </div>
+    <div style="flex: 1; min-width: 180px;">
+      <div style="display: flex; gap: 10px; justify-content: right;">
+        <a href="mailto:info@trinity-hearing.com" style="color: #ccc;" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" style="color: #ccc;" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color: #ccc;" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="color: #ccc;" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/260955333007" style="color: #ccc;" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <button id="nav-toggle" aria-label="Toggle Menu">☰</button>
+    <ul id="nav-menu">
+      <li><a data-section="home">Home</a></li>
+      <li><a data-section="services">Services</a></li>
+      <li><a data-section="products">Products</a></li>
+      <li><a data-section="about">About</a></li>
+      <li><a data-section="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<!-- Main Sections -->
+<main>
+  <!-- Home -->
+  <section id="home" class="page-section active">
+    <img src="img/Hearing.jpg" alt="Trinity Health Banner" class="responsive">
+    <h2>Comprehensive Healthcare for All</h2>
+    <p>Serving Zambia with Quality Medical, Audiological & Occupational Health Solutions since 2004.</p>
+  </section>
+
+
+  <!-- Services Section -->
+<section id="services" class="page-section" style="background: #f9f9f9; padding: 60px 20px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <h2 style="text-align: center; font-size: 2.2em; color: #2c2c2c; margin-bottom: 10px;">Our Services</h2>
+    <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 50px;">
+      We provide holistic healthcare services across our Lusaka and Kitwe centers, integrating advanced diagnostics, compassionate care, and occupational health solutions.
+    </p>
+
+    <!-- Lusaka Services -->
+    <div data-aos="fade-up" style="margin-bottom: 50px;">
+      <h3 style="font-size: 1.5em; color: maroon; margin-bottom: 15px;">Lusaka – Trinity Hearing & Balance Center</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Audiology Services</h4>
+          <p style="color: #555;">From pediatric to geriatric, offering advanced hearing tests, balance diagnostics, and therapy.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Mobile Occupational Health</h4>
+          <p style="color: #555;">On-site testing including hearing, vision, lung function, and blood work for workplaces.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Environmental Assessments</h4>
+          <p style="color: #555;">Noise mapping, ventilation studies, vibration analysis, and ergonomic evaluations.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Occupational Health Programs</h4>
+          <p style="color: #555;">Custom-designed wellness and safety programs tailored for industry and schools.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Medical Technical Support</h4>
+          <p style="color: #555;">We partner with clinics and hospitals for expert technical consultations and services.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Training & Awareness</h4>
+          <p style="color: #555;">Community outreach, occupational health training, and public hearing awareness programs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kitwe Services -->
+    <div data-aos="fade-up" data-aos-delay="150">
+      <h3 style="font-size: 1.5em; color: maroon; margin-bottom: 15px;">Kitwe – Trinity Health Medical Center</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Primary Health Services</h4>
+          <p style="color: #555;">General outpatient care, chronic disease management, pharmacy, and laboratory diagnostics.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Mother & Child Health</h4>
+          <p style="color: #555;">Comprehensive care including ANC, PNC, immunization services, and nutritional monitoring.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Pediatrics</h4>
+          <p style="color: #555;">Child check-ups, growth assessments, immunizations, and early developmental screenings.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Diagnostic Testing</h4>
+          <p style="color: #555;">Complete testing solutions from blood work to audiometry, vision exams, and spirometry.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Occupational Health</h4>
+          <p style="color: #555;">On-site workplace screenings, staff wellness programs, and training solutions.</p>
+        </div>
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+          <h4 style="margin-bottom: 10px; color: #2c2c2c;">Hearing Services</h4>
+          <p style="color: #555;">Newborn hearing screening, auditory care for children and adults, and hearing aid support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Products Section -->
+<section id="products" class="page-section" style="background: #ffffff; padding: 70px 20px;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="text-align: center; font-size: 2.5em; color: #2c2c2c; margin-bottom: 10px;">Our Products</h2>
+    <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 50px;">
+      We offer a comprehensive range of medical and occupational health products that blend cutting-edge technology with patient-focused design. Explore our product categories below.
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+      <!-- Product 1 -->
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1588776814546-7d80aa0ef272" alt="Hearing Aids" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+        <h4 style="margin-top: 15px; font-size: 1.2em; color: maroon;">Hearing Aids & Accessories</h4>
+        <p style="color: #555;">Top brands like Starkey, Phonak, and Oticon. Discreet designs, advanced features, and custom fittings.</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1606755962771-0043fba86b7c" alt="Audiology Equipment" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+        <h4 style="margin-top: 15px; font-size: 1.2em; color: maroon;">Audiology & Diagnostic Equipment</h4>
+        <p style="color: #555;">Full suite of diagnostic tools including tympanometers, audiometers, and otoacoustic emission devices.</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1580281658211-3370c153b1bc" alt="Spirometry Devices" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+        <h4 style="margin-top: 15px; font-size: 1.2em; color: maroon;">Spirometry Devices</h4>
+        <p style="color: #555;">Portable and clinical-grade lung function testing tools for occupational and general health use.</p>
+      </div>
+
+      <!-- Product 4 -->
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e80" alt="Custom Hearing Protection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+        <h4 style="margin-top: 15px; font-size: 1.2em; color: maroon;">Custom Hearing Protection</h4>
+        <p style="color: #555;">Molded earplugs and noise filters tailored for musicians, industry workers, and general users.</p>
+      </div>
+
+      <!-- Product 5 -->
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1623940464949-2dd9f015d56d" alt="PPE Equipment" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+        <h4 style="margin-top: 15px; font-size: 1.2em; color: maroon;">Personal Protective Equipment</h4>
+        <p style="color: #555;">Certified PPE including face shields, gloves, masks, and full-body suits for medical and industrial safety.</p>
+      </div>
+
+      <!-- Product 6 -->
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1617692855027-61cd6c15f127" alt="Medical Equipment" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;">
+        <h4 style="margin-top: 15px; font-size: 1.2em; color: maroon;">Medical Equipment & Consumables</h4>
+        <p style="color: #555;">Quality medical supplies, surgical tools, diagnostic consumables, and facility essentials.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- About Section -->
+<section id="about" class="page-section" style="background-color: #f9f9f9; padding: 80px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+    
+    <!-- Left Content -->
+    <div style="flex: 1; min-width: 300px;">
+      <h2 style="font-size: 2.5rem; color: maroon; margin-bottom: 20px;">About Trinity Health</h2>
+      <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+        <strong>Trinity Health Ltd.</strong>, formerly known as Trinity Hearing Solutions, has been at the forefront of Zambia's healthcare innovation since its founding in <strong>2004</strong>. In 2013, we rebranded to better reflect our expanded services—transitioning from a niche audiology provider to a nationwide multidisciplinary healthcare partner.
+      </p>
+
+      <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+        With strategic locations in Lusaka and Kitwe, we specialize in <strong>clinical care</strong>, <strong>occupational health</strong>, and <strong>community health solutions</strong>, offering both in-clinic and mobile services tailored to diverse client needs—from pediatric to geriatric, from individual care to corporate health programs.
+      </p>
+
+      <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+        We are proud authorized distributors of <strong>eMoyo medical products</strong> in Zambia, offering full device warranties, high-quality audiology and diagnostic equipment, and cutting-edge mobile health solutions to ensure accessibility for all.
+      </p>
+
+      <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+        Trinity Health Ltd. also delivers <strong>technical support and capacity building</strong> to clinics and hospitals across Zambia, partnering with public, private, and nonprofit organizations to improve healthcare outcomes, especially in hard-to-reach communities.
+      </p>
+    </div>
+
+    <!-- Right Image and Profile -->
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="img/alfred-mwamba-headshot1.jpg" alt="Dr. Alfred Mwamba" style="border-radius: 15px; width: 100%; max-width: 450px; object-fit: cover; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+      <h3 style="margin-top: 25px; color: maroon;">Dr. Alfred Mwamba</h3>
+      <p style="color: #666; font-size: 1rem; margin-top: 5px;"><strong>Technical Director</strong></p>
+      <p style="font-size: 1rem; color: #555; line-height: 1.7; margin-top: 10px;">
+        Zambia’s only registered audiologist, Dr. Mwamba brings over <strong>18 years</strong> of experience in audiology, occupational health, and public healthcare systems. A thought leader in ear and hearing care, he continues to shape Trinity's national footprint and strategic vision.
+      </p>
+    </div>
+  </div>
+
+  <!-- Vision & Values Section -->
+  <div style="margin-top: 80px; text-align: center;">
+    <h3 style="color: maroon; font-size: 2rem;">Our Vision & Values</h3>
+    <p style="max-width: 800px; margin: 20px auto; color: #555; font-size: 1.1rem; line-height: 1.8;">
+      At Trinity Health, we envision a Zambia where quality health services are accessible to every individual, regardless of geography or income. Our mission is anchored on <strong>integrity</strong>, <strong>innovation</strong>, <strong>community empowerment</strong>, and <strong>clinical excellence</strong>.
+    </p>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+<section id="contact" class="page-section" style="background-color: #f3f5f9; padding: 80px 20px;">
+  <div style="max-width: 1200px; margin: auto; text-align: center;">
+    <h2 style="font-size: 2.5rem; color: maroon; margin-bottom: 40px;">Get in Touch</h2>
+    <p style="font-size: 1.1rem; color: #555; max-width: 700px; margin: 0 auto 60px;">
+      We’re here to assist with your health needs, provide support, or schedule an appointment. Reach out to any of our locations below.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+
+      <!-- Lusaka Office -->
+      <div style="background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); flex: 1; min-width: 300px; max-width: 500px;">
+        <h3 style="color: maroon; margin-bottom: 20px;">📍 Lusaka Office</h3>
+        <p><strong>Address:</strong><br>Trinity Hearing Center<br>4 Suez Rd., Cathedral Hill, Lusaka</p>
+        <p><strong>Postnet Box:</strong><br>240, Private Bag E891, Manda Hill</p>
+        <p><strong>Phone:</strong><br>+260 211 252515</p>
+        <p><strong>Mobile:</strong><br>+260 966 730 037</p>
+        <p><strong>Email:</strong><br><a href="mailto:info@trinity-hearing.com" style="color:maroon;">info@trinity-hearing.com</a></p>
+      </div>
+
+      <!-- Kitwe Office -->
+      <div style="background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); flex: 1; min-width: 300px; max-width: 500px;">
+        <h3 style="color: maroon; margin-bottom: 20px;">📍 Kitwe Office</h3>
+        <p><strong>Address:</strong><br>398/299 Freedom Avenue, Parklands, Kitwe</p>
+        <p><strong>Phone:</strong><br>+260 972 466 630 / 0955 333 007</p>
+        <p><strong>Email:</strong><br><a href="mailto:trinityhealthkitwe@gmail.com" style="color:#1a3d7c;">trinityhealthkitwe@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer style="background-color: #535050; color: #f1f1f1; text-align: center; padding: 30px 20px; font-family: 'Segoe UI', sans-serif;">
+  
+  <!-- Links Section -->
+  <div class="footer-column" style="margin-bottom: 15px;">
+    <ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
+      <li style="display: inline; margin: 0 15px;">
+        <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none;">Privacy Policy</a>
+      </li>
+      <li style="display: inline; margin: 0 15px;">
+        <a href="terms-conditions.html" style="color: #ffffff; text-decoration: none;">Terms & Conditions</a>
+      </li>
+      <li style="display: inline; margin: 0 15px;">
+        <a href="faq.html" style="color: #ffffff; text-decoration: none;">FAQs</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Copyright -->
+  <p style="font-size: 0.85em; color: #ccc; margin: 0;">
+    &copy; 2025 Trinity Health Limited. All rights reserved.
+  </p>
+</footer>
+
+
+  <!-- JavaScript -->
+  <script>
+    const toggleBtn = document.getElementById("nav-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('.page-section');
+
+    toggleBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        const target = link.getAttribute("data-section");
+        sections.forEach(section => {
+          section.classList.remove("active");
+          if (section.id === target) {
+            section.classList.add("active");
+          }
+        });
+        navMenu.classList.remove("show"); // Hide menu after click on mobile
+      });
+    });
+  </script>
+
+</body>
+</html>

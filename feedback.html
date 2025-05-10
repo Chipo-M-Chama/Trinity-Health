@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Trinity Health Ltd</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: maroon; color: white; padding: 10px 20px; text-align: center; }
+    .container { max-width: 600px; margin: 40px auto; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+    h2 { color: maroon; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 20px; background: maroon; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #600000; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Trinity Health</h1>
+  <p>Feedback Page</p>
+</header>
+
+<div class="container">
+  <h2>We Value Your Feedback</h2>
+  <form action="submit_feedback.php" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Your Feedback:</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Trinity Health Limited. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
